@@ -6,12 +6,16 @@ import {
 
 const BarStyled = styled.nav`
    margin: 0px;
-   height: 45px;
-   
+   padding: 10px 5px 0px 1px;
+   height: 51px;
+   background-color: aliceblue;
+   active{
+	height: 10px;
+   }
    a{
 	text-decoration: none;
 	color: black;
-	padding: 11px;
+	padding: 11px 26px 11px 20px;
 	font-size: 35px;
     }
 
