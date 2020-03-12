@@ -5,6 +5,7 @@ before running do:
   npm install
   npm install react
   npm install react-dom
+  npm install @emotion/core
   npm install @emotion/styled
   npm install react-router-dom
   npm install react-scripts
