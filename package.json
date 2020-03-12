@@ -13,7 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/osu-cs419-w20/final-project-mars-weather.git"
   },
-  "homepage": "https://github.com/osu-cs419-w20/final-project-mars-weather",
   "dependencies": {
     "@emotion/styled": "^10.0.27",
     "react": "^16.13.0",
