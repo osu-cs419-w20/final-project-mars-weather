@@ -11,13 +11,13 @@ function HomeContent(){
 
   useEffect(() => {
   async function fetchPhoto() {
-     const response = await fetch(testapi);
+     const response = await fetch(api);
      const responseData = await response.json();
      setData(responseData || [] );
   }
      fetchPhoto();
    
-  }, testapi);
+  }, api);
 
 
    return(
