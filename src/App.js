@@ -6,9 +6,7 @@ import MarsRoverPhoto from './pages/MarsRoverPhoto';
 import NotFound from './pages/NotFound';
 import NavBar from './components/NavBar';
 import { Switch,
-	 Route,
-	 useRouteMatch,
-	 useParams
+	 Route
 	 
 	} from 'react-router-dom';
 
