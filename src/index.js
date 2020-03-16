@@ -5,8 +5,9 @@ import App from './App';
 import {Global, css} from '@emotion/core';
 
 const globalStyles = css`
-     body{
-	margin: 0px;
+     body {
+	      margin: 0px;
+
      }
 `;
 
