@@ -1,7 +1,8 @@
-import React, 
-       { useEffect,
-	 useState 
+import React, {
+          useEffect,
+	        useState
        } from 'react';
+
 import fetch from 'isomorphic-unfetch';
 
 function HomeContent(){
@@ -10,23 +11,23 @@ function HomeContent(){
    const testapi ="https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
 
   useEffect(() => {
-  async function fetchPhoto() {
-     const response = await fetch(api);
-     const responseData = await response.json();
-     setData(responseData || [] );
-  }
-     fetchPhoto();
-   
+    async function fetchPhoto() {
+       const response = await fetch(api);
+       const responseData = await response.json();
+       setData(responseData || [] );
+    }
+    fetchPhoto();
+
   }, api);
 
 
    return(
       <div>
-	 <h1>Photo of the day</h1>
-	 <h3>{data.date}</h3>
-	 <img src={data.url} />
-	 <h2>Description: </h2>
-	 <h3>{data.explanation}</h3>
+    	 <h1>Photo of the day</h1>
+    	 <h3>{data.date}</h3>
+    	 <img src={data.url} />
+    	 <h2>Description: </h2>
+    	 <h3>{data.explanation}</h3>
       </div>
    );
 }
