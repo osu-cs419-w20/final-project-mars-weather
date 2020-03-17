@@ -9,7 +9,7 @@ import styled from '@emotion/styled';
 
 const Input = styled.input`
   border: 1px solid #ababab;
-  padding: 5px;
+  padding: 8px;
   font-size: 18px;
 `;
 
@@ -30,15 +30,20 @@ const Button = styled.button`
   }
 `;
 
+const container = styled.div `
+  display: flex;
+`;
+
+const Photos = styled.div `
+
+`;
+
 function RoverContent({ date }) {
   const [ inputDate, setInputDate ] = useState(date || "");
   const [ data, setData ] = useState([]);
   const history = useHistory();
   // const api = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2018-05-03&api_key=c872L3iRHOM9jlIPxbLTb0hgRk1q87Cs0jmDBcPh";
-
-
   // const [ loading, setLoading ] = useState(false);
-
 
   useEffect(() => {
     if(date) {
@@ -79,7 +84,7 @@ function RoverContent({ date }) {
 
   }, [ date ]);
 
-  console.log(data);
+  // console.log(data);
   // console.log("date: " + date);
   if(data) {
     if(data.length > 0) {
@@ -91,8 +96,11 @@ function RoverContent({ date }) {
              history.push(`?earth_date=${inputDate}`);
            }}>
              <Input
-               value={inputDate}
-               onChange={e => setInputDate(e.target.value)}
+              type="date"
+              name="date"
+              id="date"
+              value={inputDate}
+              onChange={e => setInputDate(e.target.value)}
              />
 
              <Button type="submit">Search Date</Button>
@@ -117,12 +125,15 @@ function RoverContent({ date }) {
             e.preventDefault();
             history.push(`?earth_date=${inputDate}`);
           }}>
-            <Input
-              value={inputDate}
-              onChange={e => setInputDate(e.target.value)}
-            />
+          <Input
+           type="date"
+           name="date"
+           id="date"
+           value={inputDate}
+           onChange={e => setInputDate(e.target.value)}
+          />
 
-            <Button type="submit">Search Date</Button>
+          <Button type="submit">Search Date</Button>
           </form>
 
           <div>
