@@ -17,10 +17,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "isomorphic-unfetch": "^3.0.0",
-<<<<<<< HEAD
-=======
     "query-string": "^6.11.1",
->>>>>>> d4e07f5bbeb2013caa8241dfe7a99fc60d24885a
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
