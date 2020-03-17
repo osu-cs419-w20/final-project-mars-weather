@@ -7,49 +7,63 @@ import styled from '@emotion/styled/macro';
 
 
 const ContainerStyled = styled.div`
-	display: inline;
-	h1{
-	   position: relative;
-	   left: 302px;
-	   top: 60px;
-	}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+  margin-top: 2%;
 
-	h2{
-	   position: relative;
-	   top: -15px;
-	   padding: 23px 0px 0px 47px;	
-	}
+	.format {
+     width: 530px;
+     height: 600px;
 
-	.date{
-	   position: relative;
-	   left: 861px;
-	   top: 14px;
-	}
+     padding-left: 20px;
 
-	.format{ 
-           position: absolute;
-           width: 530px;
-           height: 600px;
-           top: 240px;
-           left: 1022px;
-           overflow: hidden;
+     overflow: hidden;
 	   box-shadow: inset 0 0 1000px 155px #f3c7a6;
 	   color: #34131b;
+     /* color: black; */
+     h2 {
+       align-text: center;
+     }
+     h3 {
+       align-text: center;
+     }
+  }
 
-        }
 	h3.description{
 		padding: 5px 46px 0px 51px;
 	}
+
+  .APOD {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    .photoTitle{
+      flex-direction: row;
+      h1 {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+      h3 {
+        float: right;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+  }
 
 `;
 
 
 const PicStyled = styled.img`
-	display: inline;
-	width: 650px;
-	height: 600px;
-	position: relative;
-	left: 300px;
+	max-width: 650px;
+	height: auto;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 0px 40px 4px rgba(0,0,0,0.75);
 `;
 
 function HomeContent(){
@@ -70,14 +84,22 @@ function HomeContent(){
 
    return(
       <ContainerStyled>
-    	 <h1>Photo of the day</h1>
-    	 <h3 className = "date">{data.date}</h3>
-    	 <PicStyled src={data.url} />
-	<div className = "format"> 
-	   <h2>{data.title} </h2>
-	 
-    	 <h3 className= "description"> {data.explanation}</h3>
-	 </div>
+        <div className="APOD">
+
+          <div className="photoTitle">
+            <h1> Photo of the day </h1>
+            <h3 className="date"> {data.date} </h3>
+          </div>
+
+          <PicStyled src={data.url} />
+
+        </div>
+
+        <div className = "format">
+          <h2>{data.title} </h2>
+          <h3 className= "description"> {data.explanation}</h3>
+        </div>
+
       </ContainerStyled>
    );
 }
