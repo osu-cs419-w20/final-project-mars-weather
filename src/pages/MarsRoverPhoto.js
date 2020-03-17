@@ -30,12 +30,24 @@ const Button = styled.button`
   }
 `;
 
-const container = styled.div `
-  display: flex;
+const Container = styled.div `
+  /* display: flex; */
+  /* flex-direction: row; */
+  /*flex-wrap: wrap: */
 `;
 
 const Photos = styled.div `
+  display: flex;
+  flex-wrap: wrap;
 
+  div {
+    margin: 2px;
+
+    img {
+      max-width: 325px;
+      height: auto;
+    }
+  }
 `;
 
 function RoverContent({ date }) {
@@ -106,13 +118,13 @@ function RoverContent({ date }) {
              <Button type="submit">Search Date</Button>
            </form>
 
-           <div>
+           <Photos>
              {data.map(rover => (
                <div key={rover.id}>
                  <img src={rover.img_src} alt="from the mars rover" />
                </div>
              ))}
-           </div>
+           </Photos>
 
          </div>
       );
