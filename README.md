@@ -2,7 +2,7 @@
 final-project-mars-weather created by GitHub Classroom
 
 before running do:
-  npm install
+  *npm install
   npm install react
   npm install react-dom
   npm install @emotion/core
