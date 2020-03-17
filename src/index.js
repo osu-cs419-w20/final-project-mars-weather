@@ -16,6 +16,10 @@ const globalStyles = css`
 	
      }
 
+     .pageTitle{
+	text-align: center;
+     }
+
 `;
 
 ReactDOM.render(

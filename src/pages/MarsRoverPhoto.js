@@ -164,7 +164,7 @@ function MarsRoverPhoto({date}){
   // console.log("MarsRoverPhoto date:" + date);
   return (
     <div>
-      <h1>MarsRoverPhoto</h1>
+      <h1 className="pageTitle">MarsRoverPhoto</h1>
       <RoverContent date={date}/>
     </div>
   );

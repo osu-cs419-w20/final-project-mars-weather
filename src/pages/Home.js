@@ -10,7 +10,7 @@ const BackStyled = styled.div`
 function Home(){
   return (
     <BackStyled>
-       <h1>Home</h1>
+       <h1 className="pageTitle">Home</h1>
        <HomeContent />
     </BackStyled>
   );

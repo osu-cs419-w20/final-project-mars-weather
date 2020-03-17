@@ -5,29 +5,51 @@ import React, {
 import fetch from 'isomorphic-unfetch';
 import styled from '@emotion/styled/macro';
 
+
 const ContainerStyled = styled.div`
 	display: inline;
-	h2{
-	   position: absolute;
-	   top: 220px;
-	   left: 722px;
+	h1{
+	   position: relative;
+	   left: 302px;
+	   top: 60px;
 	}
-	.description{
-	   position: absolute;
-	   background:inherit;
-	   width: 520px;
-	   height: 516px;
-	   top: 299px;
-	   left: 722px;
-	   overflow: scroll;
-	}	
+
+	h2{
+	   position: relative;
+	   top: -15px;
+	   padding: 23px 0px 0px 47px;	
+	}
+
+	.date{
+	   position: relative;
+	   left: 861px;
+	   top: 14px;
+	}
+
+	.format{ 
+           position: absolute;
+           width: 530px;
+           height: 600px;
+           top: 240px;
+           left: 1022px;
+           overflow: hidden;
+	   box-shadow: inset 0 0 1000px 155px #f3c7a6;
+	   color: #34131b;
+
+        }
+	h3.description{
+		padding: 5px 46px 0px 51px;
+	}
+
 `;
+
 
 const PicStyled = styled.img`
 	display: inline;
 	width: 650px;
 	height: 600px;
 	position: relative;
+	left: 300px;
 `;
 
 function HomeContent(){
@@ -49,10 +71,13 @@ function HomeContent(){
    return(
       <ContainerStyled>
     	 <h1>Photo of the day</h1>
-    	 <h3>{data.date}</h3>
+    	 <h3 className = "date">{data.date}</h3>
     	 <PicStyled src={data.url} />
-    	 <h2>Description: </h2>
-    	 <h3 className = "description"> {data.explanation}</h3>
+	<div className = "format"> 
+	   <h2>{data.title} </h2>
+	 
+    	 <h3 className= "description"> {data.explanation}</h3>
+	 </div>
       </ContainerStyled>
    );
 }
