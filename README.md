@@ -2,14 +2,16 @@
 final-project-mars-weather created by GitHub Classroom
 
 before running do:
-  npm install
-  npm install react
-  npm install react-dom
-  npm install @emotion/core
-  npm install @emotion/styled
-  npm install react-router-dom
-  npm install react-scripts
-  npm run build
+  1. npm install
+  2. npm install react
+  3. npm install react-dom
+  4. npm install @emotion/core
+  5. npm install @emotion/styled
+  6. npm install react-router-dom
+  7. npm install react-scripts
+  8. npm install query-string
+  9. npm install isomorphic-unfetch
+  10. npm run build
 
   npm start (or npm run start if npm start doesn't work).
 
