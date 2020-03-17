@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import {Global, css} from '@emotion/core';
-
+import pic from "./pics/Mars5.jpg";
 const globalStyles = css`
+
      body{
 	margin: 0px;
+	background-image:url(${pic});
+
      }
+
 `;
 
 ReactDOM.render(
