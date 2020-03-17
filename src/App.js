@@ -19,11 +19,10 @@ function useQueryString() {
 function App() {
   return (
     <div>
-			<NavBar />
-			<main>
-			  <Switch>
-
-					<Route path="/MarsRoverPhoto">
+	<NavBar />
+		<main>
+			<Switch>
+			    <Route path="/MarsRoverPhoto">
 			  		<MarsRoverPhoto date={useQueryString().earth_date}/>
 			    </Route>
 			    <Route path="/Weather">
@@ -39,8 +38,8 @@ function App() {
 			  		<NotFound />
 		 			</Route>
 
-			  </Switch>
-		  </main>
+			 </Switch>
+		</main>
     </div>
   );
 }
