@@ -12,6 +12,7 @@ import {
 } from 'react-router-dom';
 import Popup from "reactjs-popup";
 import { css, jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 /*c4703f
  * b86637
@@ -33,11 +34,11 @@ const headerStyle = css`
 
 const parentStyle = css`
     text-align: center;
-    padding-top: 350px;
+    /* padding-top: 350px; */
 `;
 
 const fontStyle = css`
-    color: white;
+    color: black;
 `;
 
 const modalStyle = css`
@@ -51,6 +52,7 @@ const buttonStyle1 = css`
     border-radius: 12px;
     padding: 15px;
     text-decoration: none;
+    margin: 2px;
 `;
 
 const buttonStyle2 = css`
@@ -60,6 +62,7 @@ const buttonStyle2 = css`
     border-radius: 12px;
     padding: 15px;
     text-decoration: none;
+    margin: 2px;
 `;
 const buttonStyle3 = css`
     color: #c7a591;
@@ -68,6 +71,7 @@ const buttonStyle3 = css`
     border-radius: 12px;
     padding: 15px;
     text-decoration: none;
+    margin: 2px;
 `;
 
 const buttonStyle4 = css`
@@ -77,6 +81,7 @@ const buttonStyle4 = css`
     border-radius: 12px;
     padding: 15px;
     text-decoration: none;
+    margin: 2px;
 `;
 const buttonStyle5 = css`
     color: #c7a591;
@@ -85,6 +90,7 @@ const buttonStyle5 = css`
     border-radius: 12px;
     padding: 15px;
     text-decoration: none;
+    margin: 2px;
 `;
 const buttonStyle6 = css`
     color: #c7a591;
@@ -93,6 +99,7 @@ const buttonStyle6 = css`
     border-radius: 12px;
     padding: 15px;
     text-decoration: none;
+    margin: 2px;
 `;
 const buttonStyle7 = css`
     color: #c7a591;
@@ -101,10 +108,29 @@ const buttonStyle7 = css`
     border-radius: 12px;
     padding: 15px;
     text-decoration: none;
+    margin: 2px;
 `;
 
 const popupStyle = css`
     background: blue;
+    color: red;
+`;
+
+const Drawer = styled.div`
+
+  /* max-width: 500px; */
+  ul {
+    list-style-type: none;
+   li {
+     a{
+       /* text-decoration: none; */
+       color: black;
+       margin: 2px;
+     }
+
+     }
+  }
+
 `;
 
 function Weather(){
@@ -126,11 +152,10 @@ function Weather(){
     };
 
     const drawer = css`
-        background-color: #b08243;
-        max-width: 500px;
+
         visibility: ${toggle ? 'visible' : 'hidden'};
         display: inline-block;
-        //display: ${toggle ? 'none' : 'block'};
+        /* //display: ${toggle ? 'none' : 'block'}; */
 
     `;
 
@@ -162,31 +187,31 @@ function Weather(){
    var va6 = [];
    var va7 = [];
 
-   for (var key in v1.AT){
+   for ( key in v1.AT){
       va1.push(v1.AT[key]);
    }
 
-   for (var key in v2.AT){
+   for ( key in v2.AT){
       va2.push(v2.AT[key]);
    }
 
-   for (var key in v3.AT){
+   for ( key in v3.AT){
       va3.push(v3.AT[key]);
    }
 
-   for (var key in v4.AT){
+   for ( key in v4.AT){
       va4.push(v4.AT[key]);
    }
 
-   for (var key in v5.AT){
+   for ( key in v5.AT){
       va5.push(v5.AT[key]);
    }
 
-   for (var key in v6.AT){
+   for ( key in v6.AT){
      va6.push(v6.AT[key]);
    }
 
-   for (var key in v7.AT){
+   for ( key in v7.AT){
      va7.push(v7.AT[key]);
    }
 
@@ -195,103 +220,112 @@ function Weather(){
         border: none;
     `;
 
+    // <button onClick={openClose} css={temporary}> Drawer </button>
+    // <Drawer className="drawer" css={drawer}>
+    //     <ul>
+    //         <li>
+    //             <Link to={`${url}/${arr[0]}`}><button css={buttonStyle1}>SOL {arr[0]}</button></Link>
+    //             <Link to={`${url}/${arr[1]}`}><button css={buttonStyle2}>SOL {arr[1]}</button></Link>
+    //             <Link to={`${url}/${arr[2]}`}><button css={buttonStyle3}>SOL {arr[2]}</button></Link>
+    //             <Link to={`${url}/${arr[3]}`}><button css={buttonStyle4}>SOL {arr[3]}</button></Link>
+    //             <Link to={`${url}/${arr[4]}`}><button css={buttonStyle5}>SOL {arr[4]}</button></Link>
+    //             <Link to={`${url}/${arr[5]}`}><button css={buttonStyle6}>SOL {arr[5]}</button></Link>
+    //             <Link to={`${url}/${arr[6]}`}><button css={buttonStyle7}>SOL {arr[6]}</button></Link>
+    //         </li>
+    //     </ul>
+    // </Drawer>
+
     return (
         <div className="header" css={headerStyle}>
         <div>
             <h1 css={fontStyle}> Weather </h1>
-            <button onClick={openClose} css={temporary}> Drawer </button>
-            <div className="drawer" css={drawer}>
-                <u1>
-                    <li>
-                        <Link to={`${url}/${arr[0]}`}> SOL{arr[0]} </Link>
-                        <Link to={`${url}/${arr[1]}`}> SOL{arr[1]} </Link>
-                        <Link to={`${url}/${arr[2]}`}> SOL{arr[2]} </Link>
-                        <Link to={`${url}/${arr[3]}`}> SOL{arr[3]} </Link>
-                        <Link to={`${url}/${arr[4]}`}> SOL{arr[4]} </Link>
-                        <Link to={`${url}/${arr[5]}`}> SOL{arr[5]} </Link>
-                        <Link to={`${url}/${arr[6]}`}> SOL{arr[6]} </Link>
-                    </li>
-                </u1>
-            </div>
+
         </div>
         <div className="parent" css={parentStyle}>
             <h3 css={fontStyle}> Please select a day of the week:</h3>
             <Popup modal trigger={<button css={buttonStyle1}>SOL {arr[0]}</button>} css={popupStyle}>
                 <div css={modalStyle}>
                     <h2> SOL {arr[0]} </h2>
+                    <h3> {va1[0]} ℉</h3>
                     <div>
-                        Low: {va1[2]}
+                        Low: {va1[2]} ℉
                     </div>
                     <div>
-                        High: {va1[3]}
+                        High: {va1[3]} ℉
                     </div>
                 </div>
             </Popup>
             <Popup modal trigger={<button css={buttonStyle2}>SOL {arr[1]}</button>} css={popupStyle}>
                  <div css={modalStyle}>
-                    <h2> SOL {arr[1]} </h2>
-                    <div>
-                        Low: {va2[2]}
-                    </div>
-                    <div>
-                        High: {va2[3]}
-                    </div>
+                   <h2> SOL {arr[1]} </h2>
+                   <h3> {va2[0]} ℉</h3>
+                   <div>
+                       Low: {va2[2]} ℉
+                   </div>
+                   <div>
+                       High: {va2[3]} ℉
+                   </div>
                 </div>
             </Popup>
             <Popup modal trigger={<button css={buttonStyle3}>SOL {arr[2]}</button>} css={popupStyle}>
                 <div css={modalStyle}>
-                    <h2> SOL {arr[2]} </h2>
-                    <div>
-                        Low: {va3[2]}
-                    </div>
-                    <div>
-                        High: {va3[3]}
-                    </div>
+                  <h2> SOL {arr[2]} </h2>
+                  <h3> {va3[0]} ℉</h3>
+                  <div>
+                      Low: {va3[2]} ℉
+                  </div>
+                  <div>
+                      High: {va3[3]} ℉
+                  </div>
                 </div>
 
             </Popup>
             <Popup modal trigger={<button css={buttonStyle4}>SOL {arr[3]}</button>} css={popupStyle}>
                 <div css={modalStyle}>
-                    <h2> SOL {arr[3]} </h2>
-                    <div>
-                        Low: {va4[2]}
-                    </div>
-                    <div>
-                        High: {va4[3]}
-                    </div>
+                  <h2> SOL {arr[3]} </h2>
+                  <h3> {va4[0]} ℉</h3>
+                  <div>
+                      Low: {va4[2]} ℉
+                  </div>
+                  <div>
+                      High: {va4[3]} ℉
+                  </div>
                 </div>
             </Popup>
             <Popup modal trigger={<button css={buttonStyle5}>SOL {arr[4]}</button>} css={popupStyle}>
                  <div css={modalStyle}>
-                    <h2> SOL {arr[4]} </h2>
-                    <div>
-                        Low: {va5[2]}
-                    </div>
-                    <div>
-                        High: {va5[3]}
-                    </div>
+                   <h2> SOL {arr[4]} </h2>
+                   <h3> {va5[0]} ℉</h3>
+                   <div>
+                       Low: {va5[2]} ℉
+                   </div>
+                   <div>
+                       High: {va5[3]} ℉
+                   </div>
                 </div>
             </Popup>
             <Popup modal trigger={<button css={buttonStyle6}>SOL {arr[5]}</button>} css={popupStyle}>
                 <div css={modalStyle}>
-                    <h2> SOL {arr[5]} </h2>
-                    <div>
-                        Low: {va6[2]}
-                    </div>
-                    <div>
-                        High: {va6[3]}
-                    </div>
+                  <h2> SOL {arr[5]} </h2>
+                  <h3> {va6[0]} ℉</h3>
+                  <div>
+                      Low: {va6[2]} ℉
+                  </div>
+                  <div>
+                      High: {va6[3]} ℉
+                  </div>
                 </div>
             </Popup>
             <Popup modal trigger={<button css={buttonStyle7}>SOL {arr[6]}</button>} css={popupStyle}>
                 <div css={modalStyle}>
-                    <h2> SOL {arr[6]} </h2>
-                    <div>
-                        Low: {va7[2]}
-                    </div>
-                    <div>
-                        High: {va7[3]}
-                    </div>
+                  <h2> SOL {arr[6]} </h2>
+                  <h3> {va7[0]} ℉</h3>
+                  <div>
+                      Low: {va7[2]} ℉
+                  </div>
+                  <div>
+                      High: {va7[3]} ℉
+                  </div>
                 </div>
 
             </Popup>

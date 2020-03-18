@@ -1,10 +1,10 @@
 import React from 'react';
 import HomeContent from '../components/HomeContent';
-import pic from "../pics/Mars5.jpg";
+// import pic from "../pics/Mars5.jpg";
 import styled from '@emotion/styled/macro';
 
 const BackStyled = styled.div`
-	
+
 `;
 
 function Home(){
