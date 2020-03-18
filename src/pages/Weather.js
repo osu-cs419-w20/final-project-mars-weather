@@ -20,6 +20,11 @@ import { css, jsx } from '@emotion/core';
  *a34f1f
  *a34d1c
  *a34b18
+ * With regards to the parameterized routes, I had everything set up in this manner:
+ *    - Had individual navlinks for each SOL day
+ *    - Had individual component to display based on :path parameter, which was passed in as 0...6
+ *    - For some reason, when I tried to route using <Route> </Route>, react was saying that there was an error with 
+ *      how the files were imported. Because of this, I was unable to display the pages.
  * */
 
 const headerStyle = css`
