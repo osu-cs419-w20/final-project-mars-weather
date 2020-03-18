@@ -9,7 +9,7 @@ import styled from '@emotion/styled/macro';
 const ContainerStyled = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   margin-top: 2%;
 
   .format {
@@ -20,7 +20,7 @@ const ContainerStyled = styled.div`
      box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
 
      h2{
-        text-align: center;	
+        text-align: center;
      }
   }
 
@@ -32,16 +32,16 @@ const ContainerStyled = styled.div`
     display: flex;
     flex-direction: column;
     padding-right: 20px;
-    
+
     .photoTitle h1{
        position: relative;
        top: 60px;
     }
 
     .photoTitle h3{
-	position: relative;
-	top: 15px;
-	left: 560px;
+    	position: relative;
+    	top: 15px;
+    	left: 560px;
     }
 
   }
@@ -60,7 +60,7 @@ const PicStyled = styled.img`
 function HomeContent(){
    const [ data, setData ] = useState([]);
    const  api = "https://api.nasa.gov/planetary/apod?api_key=c872L3iRHOM9jlIPxbLTb0hgRk1q87Cs0jmDBcPh";
-   const testapi ="https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+   // const testapi ="https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
 
    useEffect(() => {
      async function fetchPhoto() {
