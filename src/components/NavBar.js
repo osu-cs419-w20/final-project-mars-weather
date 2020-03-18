@@ -8,7 +8,7 @@ const BarStyled = styled.nav`
    margin: 0px;
    padding: 10px 5px 0px 1px;
    height: 51px;
-   background-color: aliceblue;
+   background-color: #803A15;
    active {
 	    height: 10px;
    }
@@ -17,11 +17,16 @@ const BarStyled = styled.nav`
   	color: black;
   	padding: 11px 26px 11px 20px;
   	font-size: 35px;
+
+    &:hover {
+      background-color: #AA6039;
+    }
   }
 
   a.active{
-    background-color: lightgrey;
+    background-color: #AA6039;
   }
+
 `;
 
 function NavBar(){
