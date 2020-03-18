@@ -1,7 +1,7 @@
 {
   "name": "mars-weather",
-  "version": "1.0.0",
-  "description": "web application to display mars weather and other fun facts",
+  "version": "1.0.1",
+  "description": "web application to display mars weather, photos from mars, and other fun facts",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
