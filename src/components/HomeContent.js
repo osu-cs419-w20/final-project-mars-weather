@@ -20,8 +20,10 @@ const ContainerStyled = styled.div`
      padding-left: 20px;
 
      overflow: hidden;
-	   box-shadow: inset 0 0 1000px 155px #f3c7a6;
-	   color: #34131b;
+	   /* box-shadow: inset 0 0 1000px 155px #f3c7a6; */
+     background-color: rgba(243, 199, 166, 0.5);
+	   color: black;
+     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
      /* color: black; */
      h2 {
        align-text: center;
