@@ -16,24 +16,25 @@ const Input = styled.input`
 // const TextArea = Input.withComponent('textarea');
 
 const Button = styled.button`
-  background-color: #2b7bbe;
+  background-color: #803A15;
   color: #fff;
-  border: 2px solid #2b7bbe;
+  border: 2px solid #551E00;
   border-radius: 3px;
   font-size: 18px;
   font-weight: 300;
   padding: 5px 10px;
-  margin: 5px;
+  margin-left: 5px;
   cursor: pointer;
   &:hover {
-    background-color: #71b5ed;
+    background-color: #AA6039;
   }
 `;
 
 const Container = styled.div `
-  /* display: flex; */
-  /* flex-direction: row; */
-  /*flex-wrap: wrap: */
+  margin: 20px;
+  form {
+    margin: 10px;
+  }
 `;
 
 const Photos = styled.div `
@@ -46,6 +47,7 @@ const Photos = styled.div `
     img {
       max-width: 325px;
       height: auto;
+      box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
     }
   }
 `;
@@ -102,7 +104,7 @@ function RoverContent({ date }) {
     if(data.length > 0) {
       console.log("data");
       return(
-         <div>
+         <Container>
            <form onSubmit={(e) => {
              e.preventDefault();
              history.push(`?earth_date=${inputDate}`);
@@ -126,13 +128,13 @@ function RoverContent({ date }) {
              ))}
            </Photos>
 
-         </div>
+         </Container>
       );
     }
     else {
       console.log("no data");
       return (
-        <div>
+        <Container>
           <form onSubmit={(e) => {
             e.preventDefault();
             history.push(`?earth_date=${inputDate}`);
@@ -152,7 +154,7 @@ function RoverContent({ date }) {
             <h3> There are no photos for this date </h3>
           </div>
 
-        </div>
+        </Container>
       );
     } // end if
 
@@ -160,7 +162,7 @@ function RoverContent({ date }) {
   else {
     console.log("no data");
     return (
-      <div>
+      <Container>
         <form onSubmit={(e) => {
           e.preventDefault();
           history.push(`?earth_date=${inputDate}`);
@@ -177,7 +179,7 @@ function RoverContent({ date }) {
           <h3> Please enter a real date </h3>
         </div>
 
-      </div>
+      </Container>
     );
   }
 
