@@ -8,7 +8,7 @@ const BarStyled = styled.nav`
    margin: 0px;
    padding: 10px 5px 0px 1px;
    height: 51px;
-   background-color: #803A15;
+   background-color: #c17750;
    active {
 	    height: 10px;
    }

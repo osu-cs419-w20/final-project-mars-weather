@@ -9,50 +9,39 @@ import styled from '@emotion/styled/macro';
 const ContainerStyled = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding:20px;
+  align-items: center; 
   margin-top: 2%;
 
-	.format {
+  .format {
      width: 530px;
      height: 600px;
-
-     padding-left: 20px;
-
-     overflow: hidden;
-	   /* box-shadow: inset 0 0 1000px 155px #f3c7a6; */
+     overflow: auto;
      background-color: rgba(243, 199, 166, 0.5);
-	   color: black;
      box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-     /* color: black; */
-     h2 {
-       align-text: center;
-     }
-     h3 {
-       align-text: center;
+
+     h2{
+        text-align: center;	
      }
   }
 
-	h3.description{
-		padding: 5px 46px 0px 51px;
-	}
+   h3.description{
+     padding: 5px 46px 0px 51px;
+   }
 
   .APOD {
     display: flex;
     flex-direction: column;
     padding-right: 20px;
-    .photoTitle{
-      flex-direction: row;
-      h1 {
-        float: left;
-        margin: 0;
-        padding: 0;
-      }
-      h3 {
-        float: right;
-        margin: 0;
-        padding: 0;
-      }
+    
+    .photoTitle h1{
+       position: relative;
+       top: 60px;
+    }
+
+    .photoTitle h3{
+	position: relative;
+	top: 15px;
+	left: 560px;
     }
 
   }
@@ -61,8 +50,8 @@ const ContainerStyled = styled.div`
 
 
 const PicStyled = styled.img`
-	max-width: 650px;
-	height: auto;
+  max-width: 650px;
+  height: auto;
   margin: 0;
   padding: 0;
   box-shadow: 0px 0px 40px 4px rgba(0,0,0,0.75);

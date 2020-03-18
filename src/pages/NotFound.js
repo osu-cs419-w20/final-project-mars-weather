@@ -1,10 +1,18 @@
 import React from "react";
+import styled from '@emotion/styled/macro';
+
+const NotFoundStyled = styled.div`
+	h1{
+	    text-align: center;
+	    font-size: 50px;
+	}
+`;
 
 function NotFound(){
   return (
-    <div>
-      <h1>404 not found!</h1>
-    </div>
+    <NotFoundStyled>
+      <h1>404 The page you request is not found!</h1>
+    </NotFoundStyled>
   );
 }
 
