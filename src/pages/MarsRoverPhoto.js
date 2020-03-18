@@ -9,24 +9,46 @@ import styled from '@emotion/styled';
 
 const Input = styled.input`
   border: 1px solid #ababab;
-  padding: 5px;
+  padding: 8px;
   font-size: 18px;
 `;
 
 // const TextArea = Input.withComponent('textarea');
 
 const Button = styled.button`
-  background-color: #2b7bbe;
+  background-color: #803A15;
   color: #fff;
-  border: 2px solid #2b7bbe;
+  border: 2px solid #551E00;
   border-radius: 3px;
   font-size: 18px;
   font-weight: 300;
   padding: 5px 10px;
-  margin: 5px;
+  margin-left: 5px;
   cursor: pointer;
   &:hover {
-    background-color: #71b5ed;
+    background-color: #AA6039;
+  }
+`;
+
+const Container = styled.div `
+  margin: 20px;
+  form {
+    margin: 10px;
+  }
+`;
+
+const Photos = styled.div `
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    margin: 2px;
+
+    img {
+      max-width: 325px;
+      height: auto;
+      box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    }
   }
 `;
 
@@ -35,10 +57,7 @@ function RoverContent({ date }) {
   const [ data, setData ] = useState([]);
   const history = useHistory();
   // const api = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2018-05-03&api_key=c872L3iRHOM9jlIPxbLTb0hgRk1q87Cs0jmDBcPh";
-
-
   // const [ loading, setLoading ] = useState(false);
-
 
   useEffect(() => {
     if(date) {
@@ -79,57 +98,63 @@ function RoverContent({ date }) {
 
   }, [ date ]);
 
-  console.log(data);
+  // console.log(data);
   // console.log("date: " + date);
   if(data) {
     if(data.length > 0) {
       console.log("data");
       return(
-         <div>
+         <Container>
            <form onSubmit={(e) => {
              e.preventDefault();
              history.push(`?earth_date=${inputDate}`);
            }}>
              <Input
-               value={inputDate}
-               onChange={e => setInputDate(e.target.value)}
+              type="date"
+              name="date"
+              id="date"
+              value={inputDate}
+              onChange={e => setInputDate(e.target.value)}
              />
 
              <Button type="submit">Search Date</Button>
            </form>
 
-           <div>
+           <Photos>
              {data.map(rover => (
                <div key={rover.id}>
                  <img src={rover.img_src} alt="from the mars rover" />
                </div>
              ))}
-           </div>
+           </Photos>
 
-         </div>
+         </Container>
       );
     }
     else {
       console.log("no data");
       return (
-        <div>
+        <Container>
           <form onSubmit={(e) => {
             e.preventDefault();
             history.push(`?earth_date=${inputDate}`);
           }}>
-            <Input
-              value={inputDate}
-              onChange={e => setInputDate(e.target.value)}
-            />
+          <Input
+           type="date"
+           name="date"
+           id="date"
+           value={inputDate}
+           onChange={e => setInputDate(e.target.value)}
+          />
 
-            <Button type="submit">Search Date</Button>
+          <Button type="submit">Search Date</Button>
           </form>
 
           <div>
             <h3> There are no photos for this date </h3>
           </div>
 
-        </div>
+        </Container>
       );
     } // end if
 
@@ -137,7 +162,7 @@ function RoverContent({ date }) {
   else {
     console.log("no data");
     return (
-      <div>
+      <Container>
         <form onSubmit={(e) => {
           e.preventDefault();
           history.push(`?earth_date=${inputDate}`);
@@ -154,7 +179,7 @@ function RoverContent({ date }) {
           <h3> Please enter a real date </h3>
         </div>
 
-      </div>
+      </Container>
     );
   }
 
