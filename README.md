@@ -1,6 +1,12 @@
 # final-project-mars-weather
 final-project-mars-weather created by GitHub Classroom
 
+This project builds a user-friendly weather web app for Mars. 
+
+Features:
+7 days weather forecast
+Mars rover photos by dates
+
 before running do:
   1. npm install
   2. npm install react
